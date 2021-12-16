@@ -33,7 +33,7 @@ const sample = [
     const sorted = input.sort( (a, b) => a.startTime - b.startTime );
     const timeLimit = 1440;
   
-    for( let i = 0; i < sorted.length - 2; i++ ) {
+    for( let i = 0; i < sorted.length - 1; i++ ) {
       const current = sorted[i];
       const next = sorted[i + 1];
       const isNotOverlap = current.endTime + duration <= next.startTime;
@@ -60,4 +60,5 @@ const sample = [
     }
   }
   
+  console.log( 'non-blocking', handler(sample, 30) ) 
   console.log( 'non-blocking', handler(sample, 60) ) 
