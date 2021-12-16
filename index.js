@@ -60,5 +60,5 @@ const sample = [
     }
   }
   
-  console.log( 'non-blocking', handler(sample, 30) ) 
   console.log( 'non-blocking', handler(sample, 60) ) 
+  console.log( 'non-blocking', handler(sample, 30) ) 
